@@ -1,0 +1,30 @@
+---
+title: "project"
+author: "Dhevan Singh, 62395199"
+date: "2024-11-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+edgesproj<-read.csv("edgesproj.csv",header=F)
+nodesproj<-read.csv("nodesproj.csv",header=F)
+project<-graph_from_data_frame(edgesproj,nodesproj,directed=F)
+ V(project)$color<-"lightblue"
+ V(project)$color[1:9]<-"navy"
+ V(project)$label.color<-"blue"
+ V(project)$label.color[1:9]<-"white"
+ E(project)$color<-"black"
+ V(project)$size[1:58]<-c(15,25,10,15,10,10,10,10,20,30,25,10,10,10,25,10,15,25,20,20,10,10,15,10,10,10,10,10,20,30,15 ,30,25,10,20,10,15 ,20,10,10,10,15,30,30,10,15,10,10,10,10 ,10,10, 10,10,10,10,15, 10)
+ E(project)$width[1:90]<-c(1.2,1,0.7,0.6,0.5,0.4,0.4,0.3,0.3,0.3,1.1,0.8,0.5,0.5,0.4,0.4,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.2,0.9,0.8,0.8,0.7,0.4,0.3,0.3,0.3,0.3
+,0.2,1.7,1.5,1,0.5,0.5,0.5,0.5,0.4,0.4,0.4,0.9,0.7,0.5,0.5,0.4,0.4,0.3,0.3
+,0.3,0.3,1.1,0.8,0.6,0.5,0.4,0.4,0.3,0.3,0.3,0.3,0.8,0.7,0.6,0.6,0.5,0.4
+,0.4,0.4,0.4,0.4,1.7,1,0.9,0.9,0.5,0.5,0.4,0.4,0.4,0.4) 
+ E(project)$color[1:90]<-c("red","red","green","green","green","black","black","black","black","black","red","green","green","green","black","black","black","black","black","black","black","black","black","black","black","black","black","black","black"
+,"black","green","green","green","green","black","black","black","black"
+,"black","black","red","red","red","green","green","green","green","black"
+,"black","black","green","green","green","green","black","black","black"
+,"black","black","black","red","green","green","green","black","black","black"
+,"black","black","black","green","green","green","green","green","black",
+"black","black","black","black","red","red","green","green","green","green"
+,"black","black","black","black")
+```
