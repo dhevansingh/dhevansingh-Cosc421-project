@@ -6,6 +6,7 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
+library(igraph)
 edgesproj<-read.csv("edgesproj.csv",header=F)
 nodesproj<-read.csv("nodesproj.csv",header=F)
 project<-graph_from_data_frame(edgesproj,nodesproj,directed=F)
@@ -27,4 +28,6 @@ project<-graph_from_data_frame(edgesproj,nodesproj,directed=F)
 ,"black","black","black","green","green","green","green","green","black",
 "black","black","black","black","red","red","green","green","green","green"
 ,"black","black","black","black")
+ plot(project) #this plot is very messy So i used tkplot to manually move nodes to make neater
+ tkplot(project) #picture is included of what I did using tkplot
 ```
